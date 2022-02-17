@@ -1,0 +1,36 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+
+let curDate = new Date()
+curDate = curDate.getHours();
+let greeting = "";
+
+if(curDate >= 1 && curDate < 12)
+{
+  greeting = "Good Morning";
+}else if(curDate >= 12 && curDate <19)
+{
+  greeting = "Good Afternoon";
+}else
+{
+  greeting = "Good Night";
+}
+ReactDOM.render(
+  <React.Fragment>
+  <h1>Hello sir, {greeting}</h1>   
+  <h1>Testing first React small project.</h1>
+  <p>Here are the list of five netflix movies</p>
+  <ol>
+    <li>Dark</li>
+    <li>Extra curricular</li>
+    <li>My Holo Love</li>
+    <li>My first-2 love</li>
+    <li>Mr. Robot</li>
+  </ol>
+  </React.Fragment>   
+
+
+  ,document.getElementById("root")
+
+);
